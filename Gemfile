@@ -12,8 +12,9 @@ gem 'foundation-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
-
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 
 group :development, :test do
@@ -24,5 +25,8 @@ group :development, :test do
   gem 'spring'
 
   gem 'pry-rails'
+
+  gem 'dotenv-rails'
+
 end
 

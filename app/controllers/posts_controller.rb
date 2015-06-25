@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+  before_action :authenticate_user!, except: [:index]
+
   def index
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
@@ -9,6 +12,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
+    @user = current_user 
     respond_to do |format|
       if @post.save
         format.js # Will search for create.js.erb
@@ -21,6 +26,6 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:author, :content, :all_tags)
+      params.require(:post).permit(:name, :content, :all_tags)
     end
 end

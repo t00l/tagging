@@ -1,0 +1,9 @@
+ <p>
+	<% unless  user_signed_in? %>
+		<li><%= link_to 'Ingresar', new_user_session_path %></li>
+		<li><%= link_to 'Registrar', new_user_registration_path %></li>
+	<%else%>
+		<li><%= link_to current_user.name, edit_user_registration_path %></li>
+		<li><%= link_to 'Salir', destroy_user_session_path, method: :delete, data: { confirm: 'Seguro que deseas salir?'} %></li>
+	<% end %>
+ </p>
