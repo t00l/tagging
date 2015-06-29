@@ -15,8 +15,3 @@
  *= require foundation_and_overrides
 
  */
-nav {
-  img {
-    max-width: 48px;
-  }
-}

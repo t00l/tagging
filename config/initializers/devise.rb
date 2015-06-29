@@ -263,10 +263,5 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   config.omniauth :facebook, ENV['FB_APP_ID'], ENV['FB_SECRET_KEY']
-  
-  config.omniauth :linkedin, ENV['LINKEDIN_KEY'], ENV['LINKEDIN_SECRET'],
-  scope: 'r_basicprofile',
-  fields: ['id', 'first-name', 'last-name', 'location', 'picture-url', 
-  'public-profile-url']
 
 end
