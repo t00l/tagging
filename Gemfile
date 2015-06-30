@@ -16,6 +16,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-linkedin-oauth2'
+gem 'cancancan'
 
 
 
